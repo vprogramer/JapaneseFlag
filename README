@@ -1,0 +1,5 @@
+To start the program, enter:
+    python3 flag.py N
+Where N is a integer even number.
+Example:
+   python3 flag.py 20
