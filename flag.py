@@ -16,32 +16,22 @@ def flag(N):
             for j in range(width):
                 if i == 0 or i == height - 1:
                     string += "#"
-                    # print("#", end="")
                 elif j == 0 or j == width - 1:
                     string += "#"
-                    # print("#", end="")
                 elif i >= x[4] and i <= x[6] and i == j:
                     string += "*"
-                    # print("*", end="")
                 elif i >= x[1] and i <= x[3] and i + N == j:
                     string += "*"
-                    # print("*", end="")
                 elif i >= x[0] and i <= x[2] and i == height - j - 1:
                     string += "*"
-                    # print("*", end="")
                 elif i >= x[5] and i <= x[7] and i == height - j - 1 + N:
                     string += "*"
-                    # print("*", end="")
-                elif j > y[2] and j < y[3] and i > x[0] and i < x[
-                    6] and i < j and i + N > j and i > height - j - 1 and i < height - j - 1 + N:
+                elif j > y[2] and j < y[3] and i > x[0] and i < x[6] and i < j and i + N > j and i > height - j - 1 and i < height - j - 1 + N:
                     string += "o"
-                    # print("o", end="")
                 else:
                     string += " "
-                    # print(" ", end="")
             string += "\n"
-            #print("\n", end="")
-            return string
+        return string
     except ValueError as ArgumentError:
         print("ArgumentError")
     except Exception:
